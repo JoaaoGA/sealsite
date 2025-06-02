@@ -1,41 +1,26 @@
 
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background-color: #f8f9fa;
-  color: #1c1e21;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #1a1a1a;
 }
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Container centralizado */
 .container {
   width: 90%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
 }
-
-/* Cabeçalho */
 header {
-  background-color: #0a1a2f;
+  background: #001d3d;
   color: white;
   padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 header h1 {
   float: left;
-  font-size: 1.8rem;
 }
 nav {
   float: right;
@@ -43,135 +28,84 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 nav ul li a {
   color: white;
+  text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
 }
-nav ul li a:hover {
-  color: #00c2ff;
+nav ul li a.cta {
+  background: #e63946;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
 }
-#menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: white;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-}
-
-/* Banner */
-.banner {
-  background: linear-gradient(135deg, #0a1a2f, #002b55);
+.hero {
+  background: #003566;
   color: white;
   text-align: center;
-  padding: 6rem 1rem;
-}
-.banner h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  animation: fadeInDown 1s ease-out;
-}
-.banner p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  animation: fadeInUp 1s ease-out;
-}
-.btn-whatsapp {
-  display: inline-block;
-  background-color: #25d366;
-  color: white;
-  padding: 0.9rem 2rem;
-  font-size: 1rem;
-  border-radius: 50px;
-  font-weight: bold;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-  animation: zoomIn 0.8s ease;
-}
-.btn-whatsapp:hover {
-  background-color: #1cb157;
-  transform: scale(1.05);
-}
-
-/* Sessão de benefícios */
-.benefits {
-  background-color: white;
   padding: 4rem 1rem;
 }
-.benefits h3 {
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero .btn {
+  margin-top: 1rem;
+  display: inline-block;
+  background: #e63946;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.modais {
+  background: white;
+  padding: 3rem 0;
   text-align: center;
+}
+.modais h3 {
   margin-bottom: 2rem;
-  font-size: 2rem;
-  color: #002b55;
 }
-.benefits ul {
-  max-width: 700px;
-  margin: 0 auto;
+.cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  background: #f1f1f1;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 300px;
+}
+.card .btn {
+  margin-top: 1rem;
+  display: inline-block;
+  background: #003566;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.vantagens {
+  background: #eaf4f4;
+  padding: 3rem 1rem;
+}
+.vantagens ul {
+  max-width: 600px;
+  margin: auto;
   list-style: none;
-  text-align: left;
 }
-.benefits ul li {
+.vantagens ul li {
   font-size: 1.1rem;
-  padding: 0.6rem 0;
-  position: relative;
-  padding-left: 30px;
+  margin-bottom: 0.8rem;
 }
-.benefits ul li::before {
-  content: "✔️";
-  position: absolute;
-  left: 0;
-  color: #00c2ff;
-}
-
-/* Rodapé */
 footer {
-  background: #0a1a2f;
+  background: #001d3d;
   color: white;
   text-align: center;
-  padding: 1.5rem 0;
-  font-size: 0.95rem;
+  padding: 1rem 0;
   margin-top: 3rem;
-}
-
-/* Animações */
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes zoomIn {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  header h1, nav {
-    float: none;
-    text-align: center;
-  }
-  nav ul {
-    flex-direction: column;
-    display: none;
-    background-color: #0a1a2f;
-    position: absolute;
-    width: 100%;
-    top: 60px;
-    left: 0;
-    padding: 1rem;
-  }
-  nav.open ul {
-    display: flex;
-  }
-  #menu-toggle {
-    display: block;
-  }
 }
