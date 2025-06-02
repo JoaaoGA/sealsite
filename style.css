@@ -6,9 +6,8 @@
 }
 body {
   font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  background: #f5f7fa;
-  color: #222;
+  background: #f6f9fc;
+  color: #202020;
 }
 .container {
   max-width: 1200px;
@@ -16,7 +15,7 @@ body {
   padding: 1rem;
 }
 header {
-  background-color: #001c38;
+  background-color: #002b5c;
   color: white;
   padding: 1rem 0;
 }
@@ -36,15 +35,15 @@ nav a {
   font-weight: 500;
 }
 nav a.cta {
-  background: #00aaff;
+  background: #e91e63;
   padding: 0.4rem 1rem;
-  border-radius: 4px;
-  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
 }
 .hero {
-  background: linear-gradient(120deg, #002b5c, #004080);
+  background: linear-gradient(120deg, #003973, #007399);
   color: white;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   text-align: center;
 }
 .hero h2 {
@@ -57,62 +56,83 @@ nav a.cta {
 }
 .btn-primary {
   background: #00c26e;
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
+  padding: 0.9rem 2rem;
   color: white;
-  text-decoration: none;
+  border: none;
+  border-radius: 5px;
   font-weight: bold;
-  transition: 0.3s ease;
+  text-decoration: none;
+  transition: 0.4s ease;
 }
 .btn-primary:hover {
-  background: #00a65a;
+  background: #00a658;
+  box-shadow: 0 0 10px #00ff9d;
 }
+.pulse {
+  animation: pulseAnim 2s infinite;
+}
+@keyframes pulseAnim {
+  0% { box-shadow: 0 0 0 0 rgba(0,194,110, 0.6); }
+  70% { box-shadow: 0 0 0 15px rgba(0,194,110, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0,194,110, 0); }
+}
+
 .modalidades {
-  background: white;
   padding: 4rem 2rem;
+  text-align: center;
 }
 .modalidades h3 {
-  text-align: center;
+  font-size: 2rem;
   margin-bottom: 2rem;
-  font-size: 1.8rem;
 }
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .card {
-  background: #f9f9f9;
-  border: 1px solid #ddd;
+  background: white;
   border-radius: 10px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  text-align: center;
+  padding: 2rem;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  height: 64px;
+  margin-bottom: 1rem;
 }
 .card h4 {
-  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #002b5c;
+  margin-bottom: 0.8rem;
 }
-.card p {
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
+
+.vantagens {
+  background: #eaf7f9;
+  padding: 3rem 2rem;
+  text-align: center;
 }
-.btn-card {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background-color: #004080;
-  color: white;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s ease;
+.vantagens h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
 }
-.btn-card:hover {
-  background-color: #002b5c;
+.vantagens ul {
+  list-style: none;
+  font-size: 1.1rem;
 }
+.vantagens ul li {
+  margin-bottom: 0.6rem;
+}
+
 footer {
-  background-color: #001c38;
+  background-color: #002b5c;
   color: white;
   text-align: center;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   margin-top: 3rem;
 }
