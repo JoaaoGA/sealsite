@@ -6,104 +6,111 @@
 }
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f9f9f9;
-  color: #1a1a1a;
+  line-height: 1.6;
+  background: #f5f7fa;
+  color: #222;
 }
 .container {
-  width: 90%;
   max-width: 1200px;
   margin: auto;
+  padding: 1rem;
 }
 header {
-  background: #001d3d;
+  background-color: #001c38;
   color: white;
   padding: 1rem 0;
 }
-header h1 {
-  float: left;
-}
-nav {
-  float: right;
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 nav ul {
-  list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 1rem;
+  list-style: none;
 }
-nav ul li a {
+nav a {
   color: white;
   text-decoration: none;
   font-weight: 500;
 }
-nav ul li a.cta {
-  background: #e63946;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+nav a.cta {
+  background: #00aaff;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  color: #fff;
 }
 .hero {
-  background: #003566;
+  background: linear-gradient(120deg, #002b5c, #004080);
   color: white;
+  padding: 4rem 2rem;
   text-align: center;
-  padding: 4rem 1rem;
 }
 .hero h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
-.hero .btn {
-  margin-top: 1rem;
-  display: inline-block;
-  background: #e63946;
-  color: white;
-  padding: 0.8rem 2rem;
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.btn-primary {
+  background: #00c26e;
+  padding: 0.8rem 1.5rem;
   border-radius: 5px;
+  color: white;
   text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
 }
-.modais {
+.btn-primary:hover {
+  background: #00a65a;
+}
+.modalidades {
   background: white;
-  padding: 3rem 0;
-  text-align: center;
+  padding: 4rem 2rem;
 }
-.modais h3 {
+.modalidades h3 {
+  text-align: center;
   margin-bottom: 2rem;
+  font-size: 1.8rem;
 }
 .cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 .card {
-  background: #f1f1f1;
-  padding: 1.5rem;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
   border-radius: 10px;
-  width: 300px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
-.card .btn {
-  margin-top: 1rem;
+.card h4 {
+  margin-bottom: 1rem;
+}
+.card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+.btn-card {
   display: inline-block;
-  background: #003566;
+  padding: 0.6rem 1.2rem;
+  background-color: #004080;
   color: white;
-  padding: 0.5rem 1.5rem;
-  border-radius: 5px;
+  border-radius: 4px;
   text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
 }
-.vantagens {
-  background: #eaf4f4;
-  padding: 3rem 1rem;
-}
-.vantagens ul {
-  max-width: 600px;
-  margin: auto;
-  list-style: none;
-}
-.vantagens ul li {
-  font-size: 1.1rem;
-  margin-bottom: 0.8rem;
+.btn-card:hover {
+  background-color: #002b5c;
 }
 footer {
-  background: #001d3d;
+  background-color: #001c38;
   color: white;
   text-align: center;
   padding: 1rem 0;
