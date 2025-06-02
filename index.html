@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seals Consultoria</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Seals Consultoria</h1>
+      <nav id="menu">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="ofertas.html">Ofertas</a></li>
+          <li><a href="simulador.html">Simulador</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <button id="menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <section class="banner">
+    <div class="container">
+      <h2>Realize seu sonho com quem entende de consórcio.</h2>
+      <p>Parcelas que cabem no seu bolso com a segurança da Seals Consultoria.</p>
+      <a href="https://wa.me/55SEUNUMERO" class="btn-whatsapp" target="_blank">Fale conosco pelo WhatsApp</a>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="container">
+      <h3>Por que escolher a Seals?</h3>
+      <ul>
+        <li>✔️ Atendimento personalizado</li>
+        <li>✔️ Cotas contempladas e seguras</li>
+        <li>✔️ Aprovação rápida</li>
+        <li>✔️ Suporte completo no processo</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Seals Consultoria - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

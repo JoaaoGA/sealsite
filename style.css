@@ -1,0 +1,111 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+header {
+  background: #003366;
+  color: white;
+  padding: 1rem 0;
+  position: relative;
+}
+header h1 {
+  float: left;
+}
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.banner {
+  background-color: #004080;
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+.banner h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.banner .btn-whatsapp {
+  display: inline-block;
+  background: #25d366;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+.benefits {
+  background: #f4f4f4;
+  padding: 2rem 0;
+}
+.benefits h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.benefits ul {
+  max-width: 600px;
+  margin: 0 auto;
+  list-style: none;
+}
+.benefits ul li {
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+}
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    display: none;
+    background: #003366;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 100%;
+    padding: 1rem;
+  }
+  nav.open ul {
+    display: flex;
+  }
+  #menu-toggle {
+    display: block;
+  }
+  header h1, nav {
+    float: none;
+    text-align: center;
+  }
+}

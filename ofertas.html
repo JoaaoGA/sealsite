@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ofertas - Seals Consultoria</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Seals Consultoria</h1>
+      <nav id="menu">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="ofertas.html" class="active">Ofertas</a></li>
+          <li><a href="simulador.html">Simulador</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <button id="menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <section class="container" style="padding: 2rem 0;">
+    <h2>Ofertas de Consórcio</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Consórcio de Veículo</h3>
+        <p>Carta de R$ 50.000</p>
+        <p>48 parcelas de R$ 1.230</p>
+        <a href="https://wa.me/55SEUNUMERO?text=Tenho%20interesse%20no%20consórcio%20de%20veículo%20de%20R$50.000" target="_blank" class="btn-whatsapp">Quero esta oferta</a>
+      </div>
+      <div class="card">
+        <h3>Consórcio de Imóvel</h3>
+        <p>Carta de R$ 120.000</p>
+        <p>120 parcelas de R$ 1.100</p>
+        <a href="https://wa.me/55SEUNUMERO?text=Tenho%20interesse%20no%20consórcio%20de%20imóvel%20de%20R$120.000" target="_blank" class="btn-whatsapp">Quero esta oferta</a>
+      </div>
+      <div class="card">
+        <h3>Consórcio de Serviço</h3>
+        <p>Carta de R$ 20.000</p>
+        <p>36 parcelas de R$ 655</p>
+        <a href="https://wa.me/55SEUNUMERO?text=Tenho%20interesse%20no%20consórcio%20de%20serviço%20de%20R$20.000" target="_blank" class="btn-whatsapp">Quero esta oferta</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Seals Consultoria - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

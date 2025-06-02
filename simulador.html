@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador - Seals Consultoria</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Seals Consultoria</h1>
+      <nav id="menu">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="ofertas.html">Ofertas</a></li>
+          <li><a href="simulador.html" class="active">Simulador</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <button id="menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <section class="container" style="padding: 2rem 0;">
+    <h2>Simule seu Consórcio</h2>
+    <form id="simulador-form">
+      <label for="nome">Seu nome:</label><br />
+      <input type="text" id="nome" required /><br /><br />
+
+      <label for="tipo">Tipo de consórcio:</label><br />
+      <select id="tipo" required>
+        <option value="Veículo">Veículo</option>
+        <option value="Imóvel">Imóvel</option>
+        <option value="Serviço">Serviço</option>
+      </select><br /><br />
+
+      <label for="valor">Valor da carta:</label><br />
+      <input type="number" id="valor" required /><br /><br />
+
+      <label for="parcelas">Número de parcelas:</label><br />
+      <input type="number" id="parcelas" required /><br /><br />
+
+      <button type="submit" class="btn-whatsapp">Simular via WhatsApp</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Seals Consultoria - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('open');
+    });
+
+    document.getElementById('simulador-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value;
+      const tipo = document.getElementById('tipo').value;
+      const valor = document.getElementById('valor').value;
+      const parcelas = document.getElementById('parcelas').value;
+      const mensagem = `Olá, meu nome é ${nome} e gostaria de simular um consórcio do tipo ${tipo}, com valor de R$${valor} em ${parcelas} parcelas.`;
+      const numero = 'SEUNUMERO'; // Substitua com DDD + número
+      const url = `https://wa.me/55${numero}?text=${encodeURIComponent(mensagem)}`;
+      window.open(url, '_blank');
+    });
+  </script>
+</body>
+</html>

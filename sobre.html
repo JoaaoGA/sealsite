@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre - Seals Consultoria</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Seals Consultoria</h1>
+      <nav id="menu">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html" class="active">Sobre</a></li>
+          <li><a href="ofertas.html">Ofertas</a></li>
+          <li><a href="simulador.html">Simulador</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <button id="menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <section class="container" style="padding: 2rem 0;">
+    <h2>Sobre a Seals Consultoria</h2>
+    <p>A Seals Consultoria é especializada em soluções inteligentes em consórcios, conectando pessoas aos seus sonhos com segurança, agilidade e orientação profissional.</p>
+    <br>
+    <h3>Missão</h3>
+    <p>Oferecer acesso acessível e confiável ao consórcio, com foco no sucesso e na satisfação dos nossos clientes.</p>
+    <br>
+    <h3>Visão</h3>
+    <p>Ser referência nacional em consultoria de consórcios, promovendo crescimento e transformação financeira.</p>
+    <br>
+    <h3>Valores</h3>
+    <ul>
+      <li>✔️ Compromisso com o cliente</li>
+      <li>✔️ Transparência e ética</li>
+      <li>✔️ Agilidade e eficiência</li>
+      <li>✔️ Inovação e melhoria contínua</li>
+    </ul>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Seals Consultoria - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

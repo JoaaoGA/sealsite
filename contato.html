@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato - Seals Consultoria</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Seals Consultoria</h1>
+      <nav id="menu">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="ofertas.html">Ofertas</a></li>
+          <li><a href="simulador.html">Simulador</a></li>
+          <li><a href="contato.html" class="active">Contato</a></li>
+        </ul>
+      </nav>
+      <button id="menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <section class="container" style="padding: 2rem 0;">
+    <h2>Fale com a Seals</h2>
+    <p>Entre em contato pelo WhatsApp, estamos prontos para te atender.</p>
+    <br>
+    <a href="https://wa.me/55SEUNUMERO?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20as%20opções%20de%20consórcio!" target="_blank" class="btn-whatsapp">Falar pelo WhatsApp</a>
+
+    <br><br>
+    <p>Ou envie um e-mail: <strong>contato@sealsconsultoria.com.br</strong></p>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Seals Consultoria - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
